@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete your purchase at MASA - Premium Egyptian Clothing">
+    <title>Checkout - MASA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">MASA</a>
+                </div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="search-container">
+                        <input type="text" placeholder="Search...">
+                        <button class="search-btn">
+                            <span class="material-symbols-outlined">search</span>
+                        </button>
+                    </div>
+                    <a href="cart.html" class="cart-icon">
+                        <span class="material-symbols-outlined">shopping_bag</span>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <button class="mobile-menu-btn">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="checkout-header">
+            <div class="container">
+                <h1>Checkout</h1>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> / <a href="cart.html">Cart</a> / <span>Checkout</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="checkout-content">
+            <div class="container">
+                <div class="checkout-steps">
+                    <div class="step active">
+                        <span class="step-number">1</span>
+                        <span class="step-name">Shipping</span>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <span class="step-name">Payment</span>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <span class="step-name">Confirmation</span>
+                    </div>
+                </div>
+
+                <div class="checkout-form-container">
+                    <form id="checkout-form">
+                        <!-- Shipping Information (Step 1) -->
+                        <div class="checkout-step-content active" id="shipping-step">
+                            <h2>Shipping Information</h2>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name">First Name *</label>
+                                    <input type="text" id="first-name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name">Last Name *</label>
+                                    <input type="text" id="last-name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Street Address *</label>
+                                <input type="text" id="address" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City *</label>
+                                    <input type="text" id="city" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="governorate">Governorate *</label>
+                                    <select id="governorate" required>
+                                        <option value="">Select Governorate</option>
+                                        <option value="cairo">Cairo</option>
+                                        <option value="alexandria">Alexandria</option>
+                                        <option value="giza">Giza</option>
+                                        <option value="sharm-el-sheikh">Sharm El Sheikh</option>
+                                        <option value="luxor">Luxor</option>
+                                        <option value="aswan">Aswan</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="postal-code">Postal Code *</label>
+                                <input type="text" id="postal-code" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="order-notes">Order Notes (Optional)</label>
+                                <textarea id="order-notes" rows="4"></textarea>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="btn primary-btn next-step">Continue to Payment</button>
+                            </div>
+                        </div>
+
+                        <!-- Payment Information (Step 2) -->
+                        <div class="checkout-step-content" id="payment-step">
+                            <h2>Payment Method</h2>
+                            <div class="payment-methods">
+                                <div class="payment-method">
+                                    <input type="radio" id="credit-card" name="payment-method" value="credit-card" checked>
+                                    <label for="credit-card">
+                                        <span class="payment-icon">
+                                            <span class="material-symbols-outlined">credit_card</span>
+                                        </span>
+                                        <span class="payment-name">Credit/Debit Card</span>
+                                    </label>
+                                </div>
+                                <div class="payment-method">
+                                    <input type="radio" id="vodafone-cash" name="payment-method" value="vodafone-cash">
+                                    <label for="vodafone-cash">
+                                        <span class="payment-icon">
+                                            <span class="material-symbols-outlined">smartphone</span>
+                                        </span>
+                                        <span class="payment-name">Vodafone Cash</span>
+                                    </label>
+                                </div>
+                                <div class="payment-method">
+                                    <input type="radio" id="fawry" name="payment-method" value="fawry">
+                                    <label for="fawry">
+                                        <span class="payment-icon">
+                                            <span class="material-symbols-outlined">storefront</span>
+                                        </span>
+                                        <span class="payment-name">Fawry</span>
+                                    </label>
+                                </div>
+                                <div class="payment-method">
+                                    <input type="radio" id="cash-on-delivery" name="payment-method" value="cash-on-delivery">
+                                    <label for="cash-on-delivery">
+                                        <span class="payment-icon">
+                                            <span class="material-symbols-outlined">payments</span>
+                                        </span>
+                                        <span class="payment-name">Cash on Delivery</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Credit Card Form -->
+                            <div class="payment-details" id="credit-card-details">
+                                <div class="form-group">
+                                    <label for="card-number">Card Number *</label>
+                                    <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="expiry-date">Expiry Date *</label>
+                                        <input type="text" id="expiry-date" placeholder="MM/YY" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv">CVV *</label>
+                                        <input type="text" id="cvv" placeholder="123" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="card-name">Name on Card *</label>
+                                    <input type="text" id="card-name" required>
+                                </div>
+                            </div>
+
+                            <!-- Vodafone Cash Form -->
+                            <div class="payment-details hidden" id="vodafone-cash-details">
+                                <div class="form-group">
+                                    <label for="vodafone-number">Vodafone Number *</label>
+                                    <input type="tel" id="vodafone-number" placeholder="01xxxxxxxxx" required>
+                                </div>
+                            </div>
+
+                            <!-- Fawry Form -->
+                            <div class="payment-details hidden" id="fawry-details">
+                                <p>You will receive a Fawry reference number to complete your payment at any Fawry outlet.</p>
+                            </div>
+
+                            <!-- Cash on Delivery Form -->
+                            <div class="payment-details hidden" id="cash-on-delivery-details">
+                                <p>You will pay for your order when it is delivered to your address.</p>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn outline-btn prev-step">Back to Shipping</button>
+                                <button type="button" class="btn primary-btn next-step">Review Order</button>
+                            </div>
+                        </div>
+
+                        <!-- Order Review (Step 3) -->
+                        <div class="checkout-step-content" id="confirmation-step">
+                            <h2>Review Your Order</h2>
+                            <div class="order-review">
+                                <div class="review-section">
+                                    <h3>Shipping Information</h3>
+                                    <div class="review-info" id="shipping-review">
+                                        <p><strong>Name:</strong> <span id="review-name"></span></p>
+                                        <p><strong>Email:</strong> <span id="review-email"></span></p>
+                                        <p><strong>Phone:</strong> <span id="review-phone"></span></p>
+                                        <p><strong>Address:</strong> <span id="review-address"></span></p>
+                                    </div>
+                                    <button type="button" class="edit-btn" data-step="shipping">Edit</button>
+                                </div>
+                                <div class="review-section">
+                                    <h3>Payment Method</h3>
+                                    <div class="review-info" id="payment-review">
+                                        <p><strong>Method:</strong> <span id="review-payment-method"></span></p>
+                                    </div>
+                                    <button type="button" class="edit-btn" data-step="payment">Edit</button>
+                                </div>
+                                <div class="review-section">
+                                    <h3>Order Summary</h3>
+                                    <div class="order-items">
+                                        <div class="order-item">
+                                            <img src="images/product-placeholder.jpg" alt="Product Image">
+                                            <div class="order-item-details">
+                                                <h4>Premium Egyptian Cotton Shirt</h4>
+                                                <p>Size: M | Color: Blue</p>
+                                                <p>Quantity: 1</p>
+                                            </div>
+                                            <div class="order-item-price">799.00 EGP</div>
+                                        </div>
+                                        <div class="order-item">
+                                            <img src="images/product-placeholder-2.jpg" alt="Product Image">
+                                            <div class="order-item-details">
+                                                <h4>Traditional Egyptian Dress</h4>
+                                                <p>Size: S | Color: Beige</p>
+                                                <p>Quantity: 1</p>
+                                            </div>
+                                            <div class="order-item-price">1,299.00 EGP</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="btn outline-btn prev-step">Back to Payment</button>
+                                <button type="submit" class="btn primary-btn">Place Order</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="order-summary">
+                        <h2>Order Summary</h2>
+                        <div class="summary-items">
+                            <div class="summary-item">
+                                <span>Premium Egyptian Cotton Shirt × 1</span>
+                                <span>799.00 EGP</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Traditional Egyptian Dress × 1</span>
+                                <span>1,299.00 EGP</span>
+                            </div>
+                        </div>
+                        <div class="summary-subtotal">
+                            <span>Subtotal</span>
+                            <span>2,098.00 EGP</span>
+                        </div>
+                        <div class="summary-shipping">
+                            <span>Shipping</span>
+                            <span>50.00 EGP</span>
+                        </div>
+                        <div class="summary-total">
+                            <span>Total</span>
+                            <span>2,148.00 EGP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>MASA</h2>
+                    <p class="arabic-slogan">أناقتك تبدأ هنا</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Shop</h3>
+                        <ul>
+                            <li><a href="shop.html?category=men">Men</a></li>
+                            <li><a href="shop.html?category=women">Women</a></li>
+                            <li><a href="shop.html?category=kids">Kids</a></li>
+                            <li><a href="shop.html">All Products</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact</h3>
+                        <ul class="contact-info">
+                            <li><span class="material-symbols-outlined">location_on</span> Cairo, Egypt</li>
+                            <li><span class="material-symbols-outlined">phone</span> +20 123 456 7890</li>
+                            <li><span class="material-symbols-outlined">email</span> info@masa-clothing.com</li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Follow Us</h3>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><span class="material-symbols-outlined">facebook</span></a>
+                            <a href="#" aria-label="Instagram"><span class="material-symbols-outlined">photo_camera</span></a>
+                            <a href="#" aria-label="Twitter"><span class="material-symbols-outlined">flutter_dash</span></a>
+                            <a href="#" aria-label="Pinterest"><span class="material-symbols-outlined">push_pin</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 MASA. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>
+

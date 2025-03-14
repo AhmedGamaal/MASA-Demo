@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shop premium Egyptian clothing for men, women, and kids at MASA">
+  <title>Shop - MASA</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/shop.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container">
+      <p>Free shipping on orders over 1000 EGP | Use code MASA25 for 25% off your first order</p>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-wrapper">
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+
+        <!-- Logo -->
+        <div class="logo">
+          <a href="index.html">
+            <h1>MASA</h1>
+            <p class="arabic-slogan">أناقتك تبدأ هنا</p>
+          </a>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item dropdown">
+              <a href="shop.html" class="nav-link active">Shop</a>
+              <span class="dropdown-toggle material-symbols-outlined">expand_more</span>
+              <ul class="dropdown-menu">
+                <li><a href="shop.html?category=men">Men</a></li>
+                <li><a href="shop.html?category=women">Women</a></li>
+                <li><a href="shop.html?category=kids">Kids</a></li>
+                <li><a href="shop.html?collection=new">New Arrivals</a></li>
+                <li><a href="shop.html?collection=sale">Sale</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <button class="action-btn search-toggle" aria-label="Search">
+            <span class="material-symbols-outlined">search</span>
+          </button>
+          <a href="account.html" class="action-btn" aria-label="Account">
+            <span class="material-symbols-outlined">person</span>
+          </a>
+          <a href="wishlist.html" class="action-btn" aria-label="Wishlist">
+            <span class="material-symbols-outlined">favorite</span>
+            <span class="badge">0</span>
+          </a>
+          <a href="cart.html" class="action-btn" aria-label="Cart">
+            <span class="material-symbols-outlined">shopping_bag</span>
+            <span class="badge">0</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Search Overlay -->
+      <div class="search-overlay">
+        <div class="search-container">
+          <form class="search-form">
+            <input type="text" placeholder="Search for products..." class="search-input">
+            <button type="submit" class="search-btn">
+              <span class="material-symbols-outlined">search</span>
+            </button>
+          </form>
+          <button class="search-close">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title">Shop</h1>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="separator">/</span>
+          <span class="current">Shop</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section class="shop-section">
+      <div class="container">
+        <div class="shop-layout">
+          <!-- Sidebar Filters -->
+          <aside class="shop-sidebar">
+            <div class="sidebar-widget">
+              <h3 class="widget-title">Categories</h3>
+              <ul class="category-list">
+                <li>
+                  <label class="custom-checkbox">
+                    <input type="checkbox" name="category" value="all" checked>
+                    <span class="checkmark"></span>
+                    <span class="label-text">All Products</span>
+                    <span class="count">(50)</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="custom-checkbox">
+                    <input type="checkbox" name="category" value="men">
+                    <span class="checkmark"></span>
+                    <span class="label-text">Men</span>
+                    <span class="count">(18)</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="custom-checkbox">
+                    <input type="checkbox" name="category" value="women">
+                    <span class="checkmark"></span>
+                    <span class="label-text">Women</span>
+                    <span class="count">(24)</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="custom-checkbox">
+                    <input type="checkbox" name="category" value="kids">
+                    <span class="checkmark"></span>
+                    <span class="label-text">Kids</span>
+                    <span class="count">(8)</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="sidebar-widget">
+              <h3 class="widget-title">Price Range</h3>
+              <div class="price-filter">
+                <div class="price-slider-container">
+                  <div class="price-slider"></div>
+                </div>
+                <div class="price-inputs">
+                  <div class="price-input">
+                    <label for="min-price">Min</label>
+                    <input type="number" id="min-price" value="0" min="0" max="5000">
+                  </div>
+                  <div class="price-input">
+                    <label for="max-price">Max</label>
+                    <input type="number" id="max-price" value="5000" min="0" max="5000">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sidebar-widget">
+              <h3 class="widget-title">Size</h3>
+              <div class="size-options">
+                <label class="size-option">
+                  <input type="checkbox" name="size" value="xs">
+                  <span>XS</span>
+                </label>
+                <label class="size-option">
+                  <input type="checkbox" name="size" value="s">
+                  <span>S</span>
+                </label>
+                <label class="size-option">
+                  <input type="checkbox" name="size" value="m">
+                  <span>M</span>
+                </label>
+                <label class="size-option">
+                  <input type="checkbox" name="size" value="l">
+                  <span>L</span>
+                </label>
+                <label class="size-option">
+                  <input type="checkbox" name="size" value="xl">
+                  <span>XL</span>
+                </label>
+                <label class="size-option">
+                  <input type="checkbox" name="size" value="xxl">
+                  <span>XXL</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="sidebar-widget">
+              <h3 class="widget-title">Color</h3>
+              <div class="color-options">
+                <label class="color-option">
+                  <input type="checkbox" name="color" value="black">
+                  <span style="background-color: #000000;"></span>
+                </label>
+                <label class="color-option">
+                  <input type="checkbox" name="color" value="white">
+                  <span style="background-color: #ffffff;"></span>
+                </label>
+                <label class="color-option">
+                  <input type="checkbox" name="color" value="beige">
+                  <span style="background-color: #f5f5dc;"></span>
+                </label>
+                <label class="color-option">
+                  <input type="checkbox" name="color" value="blue">
+                  <span style="background-color: #0000ff;"></span>
+                </label>
+                <label class="color-option">
+                  <input type="checkbox" name="color" value="green">
+                  <span style="background-color: #008000;"></span>
+                </label>
+                <label class="color-option">
+                  <input type="checkbox" name="color" value="red">
+                  <span style="background-color: #ff0000;"></span>
+                </label>
+                <label class="color-option">
+                  <input type="checkbox" name="color" value="brown">
+                  <span style="background-color: #a52a2a;"></span>
+                </label>
+                <label class="color-option">
+                  <input type="checkbox" name="color" value="gold">
+                  <span style="background-color: #ffd700;"></span>
+                </label>
+              </div>
+            </div>
+
+            <div class="sidebar-widget">
+              <h3 class="widget-title">Collections</h3>
+              <ul class="category-list">
+                <li>
+                  <label class="custom-checkbox">
+                    <input type="checkbox" name="collection" value="new">
+                    <span class="checkmark"></span>
+                    <span class="label-text">New Arrivals</span>
+                    <span class="count">(12)</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="custom-checkbox">
+                    <input type="checkbox" name="collection" value="sale">
+                    <span class="checkmark"></span>
+                    <span class="label-text">Sale</span>
+                    <span class="count">(8)</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="custom-checkbox">
+                    <input type="checkbox" name="collection" value="ramadan">
+                    <span class="checkmark"></span>
+                    <span class="label-text">Ramadan</span>
+                    <span class="count">(15)</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="custom-checkbox">
+                    <input type="checkbox" name="collection" value="wedding">
+                    <span class="checkmark"></span>
+                    <span class="label-text">Wedding</span>
+                    <span class="count">(6)</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="sidebar-actions">
+              <button class="btn btn-primary" id="apply-filters">Apply Filters</button>
+              <button class="btn btn-outline" id="reset-filters">Reset Filters</button>
+            </div>
+          </aside>
+
+          <!-- Products Container -->
+          <div class="shop-content">
+            <div class="shop-toolbar">
+              <div class="product-count">
+                <p>Showing <span id="showing-count">1-12</span> of <span id="total-count">50</span> products</p>
+              </div>
+              <div class="shop-actions">
+                <div class="view-switcher">
+                  <button class="view-btn grid active" aria-label="Grid view">
+                    <span class="material-symbols-outlined">grid_view</span>
+                  </button>
+                  <button class="view-btn list" aria-label="List view">
+                    <span class="material-symbols-outlined">view_list</span>
+                  </button>
+                </div>
+                <div class="sort-by">
+                  <label for="sort-select">Sort by:</label>
+                  <select id="sort-select" class="form-control">
+                    <option value="featured">Featured</option>
+                    <option value="newest">Newest</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="name-asc">Name: A to Z</option>
+                    <option value="name-desc">Name: Z to A</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="products-grid" id="products-container">
+              <!-- Products will be loaded dynamically via JavaScript -->
+            </div>
+
+            <div class="pagination">
+              <button class="pagination-btn prev" disabled>
+                <span class="material-symbols-outlined">chevron_left</span>
+              </button>
+              <div class="pagination-numbers">
+                <button class="pagination-number active">1</button>
+                <button class="pagination-number">2</button>
+                <button class="pagination-number">3</button>
+                <button class="pagination-number">4</button>
+                <button class="pagination-number">5</button>
+              </div>
+              <button class="pagination-btn next">
+                <span class="material-symbols-outlined">chevron_right</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-container">
+          <div class="newsletter-content">
+            <h2 class="newsletter-title">Subscribe to Our Newsletter</h2>
+            <p class="newsletter-description">Stay updated with our latest collections and exclusive offers</p>
+          </div>
+          <form class="newsletter-form">
+            <div class="form-group">
+              <input type="email" placeholder="Your email address" required class="form-control">
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </div>
+            <p class="form-disclaimer">By subscribing, you agree to our <a href="#">Privacy Policy</a></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-widgets">
+          <div class="footer-widget about-widget">
+            <div class="footer-logo">
+              <h2>MASA</h2>
+              <p class="arabic-slogan">أناقتك تبدأ هنا</p>
+            </div>
+            <p class="about-description">
+              MASA offers premium Egyptian clothing that combines traditional craftsmanship with modern design. Our products are made with the finest Egyptian cotton and authentic materials.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="Facebook">
+                <span class="material-symbols-outlined">facebook</span>
+              </a>
+              <a href="#" class="social-link" aria-label="Instagram">
+                <span class="material-symbols-outlined">photo_camera</span>
+              </a>
+              <a href="#" class="social-link" aria-label="Twitter">
+                <span class="material-symbols-outlined">flutter_dash</span>
+              </a>
+              <a href="#" class="social-link" aria-label="Pinterest">
+                <span class="material-symbols-outlined">push_pin</span>
+              </a>
+            </div>
+          </div>
+          <div class="footer-widget links-widget">
+            <h3 class="widget-title">Shop</h3>
+            <ul class="widget-links">
+              <li><a href="shop.html?category=men">Men</a></li>
+              <li><a href="shop.html?category=women">Women</a></li>
+              <li><a href="shop.html?category=kids">Kids</a></li>
+              <li><a href="shop.html?collection=new">New Arrivals</a></li>
+              <li><a href="shop.html?collection=sale">Sale</a></li>
+            </ul>
+          </div>
+          <div class="footer-widget links-widget">
+            <h3 class="widget-title">Company</h3>
+            <ul class="widget-links">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-widget contact-widget">
+            <h3 class="widget-title">Contact Us</h3>
+            <ul class="contact-info">
+              <li>
+                <span class="material-symbols-outlined">location_on</span>
+                <span>123 Tahrir Square, Cairo, Egypt</span>
+              </li>
+              <li>
+                <span class="material-symbols-outlined">phone</span>
+                <span>+20 123 456 7890</span>
+              </li>
+              <li>
+                <span class="material-symbols-outlined">email</span>
+                <span>info@masa-clothing.com</span>
+              </li>
+              <li>
+                <span class="material-symbols-outlined">schedule</span>
+                <span>Mon-Sat: 10:00 AM - 9:00 PM</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-content">
+          <p class="copyright">© 2025 MASA. All Rights Reserved.</p>
+          <div class="payment-methods">
+            <img src="images/payment-methods.png" alt="Payment Methods">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay">
+    <div class="mobile-menu-container">
+      <div class="mobile-menu-header">
+        <div class="logo">
+          <h2>MASA</h2>
+          <p class="arabic-slogan">أناقتك تبدأ هنا</p>
+        </div>
+        <button class="mobile-menu-close">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <nav class="mobile-nav">
+        <ul class="mobile-nav-list">
+          <li class="mobile-nav-item">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+          </li>
+          <li class="mobile-nav-item has-dropdown">
+            <a href="shop.html" class="mobile-nav-link active">Shop</a>
+            <button class="dropdown-toggle">
+              <span class="material-symbols-outlined">expand_more</span>
+            </button>
+            <ul class="mobile-dropdown">
+              <li><a href="shop.html?category=men">Men</a></li>
+              <li><a href="shop.html?category=women">Women</a></li>
+              <li><a href="shop.html?category=kids">Kids</a></li>
+              <li><a href="shop.html?collection=new">New Arrivals</a></li>
+              <li><a href="shop.html?collection=sale">Sale</a></li>
+            </ul>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="about.html" class="mobile-nav-link">About</a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="mobile-menu-footer">
+        <div class="mobile-menu-contact">
+          <p><span class="material-symbols-outlined">phone</span> +20 123 456 7890</p>
+          <p><span class="material-symbols-outlined">email</span> info@masa-clothing.com</p>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook">
+            <span class="material-symbols-outlined">facebook</span>
+          </a>
+          <a href="#" class="social-link" aria-label="Instagram">
+            <span class="material-symbols-outlined">photo_camera</span>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <span class="material-symbols-outlined">flutter_dash</span>
+          </a>
+          <a href="#" class="social-link" aria-label="Pinterest">
+            <span class="material-symbols-outlined">push_pin</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <span class="material-symbols-outlined">arrow_upward</span>
+  </button>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>
+
